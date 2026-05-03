@@ -26,6 +26,20 @@ When sel = 1, output y follows i1.
 
 The waveform confirms correct working of the multiplexer.
 
+## Yosys Synthesis (MUX Graph)
+
+
+
+- i0 and i1 are the input signals  
+- sel is the select line  
+- y is the output  
+
+The block labeled `$mux` represents the multiplexer logic inferred by the synthesis tool.  
+Inputs A and B correspond to i0 and i1, while S represents the select signal.
+
+This graph shows how the high-level Verilog code is converted into a hardware-level structure.  
+It confirms that the design is correctly synthesized into a multiplexer component.
+
 When sel = 0, the output y follows input i0.  
 When sel = 1, the output y follows input i1.  
 

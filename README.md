@@ -17,12 +17,20 @@ When sel = 1 → Output follows i1
 ## 2:1 MUX Waveform
 
 
+## 2:1 MUX Waveform
 
-The waveform have been uploaded in file section
+![MUX Waveform](waveforms/mux_waveform.jpeg)
 
-- The signals i0 and i1 are the inputs  
+This waveform shows the simulation of a 2:1 multiplexer.
+
+- i0 and i1 are the inputs  
 - sel is the select line  
 - y is the output  
+
+When sel = 0, output y follows i0.  
+When sel = 1, output y follows i1.  
+
+The waveform confirms correct working of the multiplexer.
 
 When sel = 0, the output y follows input i0.  
 When sel = 1, the output y follows input i1.  

@@ -54,43 +54,6 @@ end
 
 endmodule
 
-When sel = 0, the output y follows input i0.  
-When sel = 1, the output y follows input i1.
-
-
-## Test Bench Code
 
 
 
-`timescale 1ns / 1ps
-
-module tb_good_mux;
-
-reg i0, i1, sel;
-wire y;
-
-good_mux uut (
-    .i0(i0),
-    .i1(i1),
-    .sel(sel),
-    .y(y)
-);
-
-initial begin
-    $dumpfile("tb_good_mux.vcd");
-    $dumpvars(0, tb_good_mux);
-
-    i0 = 0;
-    i1 = 0;
-    sel = 0;
-
-    #300 $finish;
-end
-
-always #75 sel = ~sel;
-always #10 i0 = ~i0;
-always #55 i1 = ~i1;
-
-endmodule
-
-From the waveform, it can be observed that the output correctly switches between i0 and i1 based on the value of sel, confirming the correct working of the multiplexer.

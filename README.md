@@ -40,7 +40,7 @@ Inputs A and B correspond to i0 and i1, while S represents the select signal.
 This graph shows how the high-level Verilog code is converted into a hardware-level structure.  
 It confirms that the design is correctly synthesized into a multiplexer component.
 
-## Verilog Code
+## Verilog Code and Test Bench codes
 
 ```verilog
 module good_mux (input i0, input i1, input sel, output reg y);
@@ -57,9 +57,10 @@ endmodule
 When sel = 0, the output y follows input i0.  
 When sel = 1, the output y follows input i1.
 
+
 ## Test Bench Code
 
-```test bench
+
 
 `timescale 1ns / 1ps
 

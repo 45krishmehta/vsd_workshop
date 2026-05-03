@@ -16,9 +16,9 @@ When sel = 1 → Output follows i1
 
 ## 2:1 MUX Waveform
 
-![MUX Waveform](waveforms/mux_waveform.png)
 
-This waveform shows the simulation of a 2:1 multiplexer.
+
+The waveform have been uploaded in file section
 
 - The signals i0 and i1 are the inputs  
 - sel is the select line  

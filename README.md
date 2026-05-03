@@ -58,5 +58,59 @@ end
 endmodule
 
 
+## Timing Libraries (.lib)
+
+Timing libraries (.lib files) act like a datasheet for digital circuits. They describe how fast different logic gates operate and how much delay they introduce.
+
+They include:
+- Propagation delay of gates  
+- Setup and hold times  
+- Power consumption  
+
+Synthesis tools use these libraries to map Verilog code into real hardware with accurate timing. Without .lib files, the design would work in simulation but may fail in real hardware.
+
+In simple terms, .lib ensures that the circuit works correctly at real speeds.
+
+---
+
+## Hierarchical vs Flat Synthesis
+
+In hierarchical synthesis, the design is divided into smaller modules. Each module is synthesized separately, making the design easier to understand and debug.
+
+In flat synthesis, all modules are combined into a single block. This allows better optimization and performance but makes debugging more difficult.
+
+- Hierarchical → easier debugging  
+- Flat → better optimization  
+
+Both approaches are used depending on design requirements.
+
+---
+
+## Flip-Flops (Synchronous vs Asynchronous Reset)
+
+Flip-flops are memory elements used to store data based on a clock signal.
+
+### Asynchronous Reset
+
+
+
+- Reset works immediately, independent of clock  
+- Output changes instantly when reset is active  
+
+### Synchronous Reset
+
+
+
+- Reset works only on clock edge  
+- Output changes only during clock transition  
+
+### Key Difference
+
+- Asynchronous → fast, immediate  
+- Synchronous → controlled, stable  
+
+Both types are used based on system design needs.
+
+
 
 

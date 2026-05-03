@@ -57,60 +57,52 @@ end
 
 endmodule
 
+```
 
 ## Timing Libraries (.lib)
 
-Timing libraries (.lib files) act like a datasheet for digital circuits. They describe how fast different logic gates operate and how much delay they introduce.
+Timing libraries (.lib files) act like a datasheet for digital circuits. They describe how fast logic gates work and the delays involved.
 
 They include:
-- Propagation delay of gates  
+- Propagation delay  
 - Setup and hold times  
 - Power consumption  
 
-Synthesis tools use these libraries to map Verilog code into real hardware with accurate timing. Without .lib files, the design would work in simulation but may fail in real hardware.
-
-In simple terms, .lib ensures that the circuit works correctly at real speeds.
+These libraries help synthesis tools map Verilog code into real hardware with accurate timing.
 
 ---
 
 ## Hierarchical vs Flat Synthesis
 
-In hierarchical synthesis, the design is divided into smaller modules. Each module is synthesized separately, making the design easier to understand and debug.
+In hierarchical synthesis, the design is divided into smaller modules, making it easier to understand and debug.
 
-In flat synthesis, all modules are combined into a single block. This allows better optimization and performance but makes debugging more difficult.
+In flat synthesis, all modules are combined into a single block, allowing better optimization but making debugging harder.
 
-- Hierarchical → easier debugging  
-- Flat → better optimization  
-
-Both approaches are used depending on design requirements.
+- Hierarchical → easy to debug  
+- Flat → better performance  
 
 ---
 
 ## Flip-Flops (Synchronous vs Asynchronous Reset)
 
-Flip-flops are memory elements used to store data based on a clock signal.
+Flip-flops store data based on clock signals and are used in sequential circuits.
 
 ### Asynchronous Reset
 
 
-
-- Reset works immediately, independent of clock  
-- Output changes instantly when reset is active  
+- Reset works immediately (no clock needed)  
+- Output changes instantly  
 
 ### Synchronous Reset
 
 
 
 - Reset works only on clock edge  
-- Output changes only during clock transition  
+- Output changes during clock transition  
 
 ### Key Difference
 
 - Asynchronous → fast, immediate  
 - Synchronous → controlled, stable  
-
-Both types are used based on system design needs.
-
-
 
 
